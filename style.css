@@ -1,0 +1,140 @@
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.1s;
+}
+
+#background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#background-animation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle,
+    #f06543 10%,
+    #00c49a 50%,
+    #0074e4 70%
+  );
+  background-size: 200% 200%;
+  animation: backgroundAnimation 2s infinite;
+}
+
+/* Rest of your styles as before */
+
+/* Rest of your styles as before */
+
+h1 {
+  color: #0074e4;
+  font-size: 32px;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 20px;
+  margin: 10px;
+}
+
+#word-display {
+  font-weight: bold;
+  font-size: 24px;
+  color: #333;
+  margin-top: 20px;
+}
+
+#userInput {
+  padding: 10px;
+  font-size: 18px;
+}
+
+#guessButton {
+  padding: 10px 20px;
+  background-color: #0074e4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+#guessButton:hover {
+  background-color: #0050a3;
+}
+
+#message {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+#remainingLives {
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#usedCharacters {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#newGameButton {
+  padding: 10px 20px;
+  background-color: #0074e4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  display: none;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+#newGameButton:hover {
+  background-color: #0050a3;
+}
+
+#hangman-image {
+  max-width: 100%;
+  max-height: 300px;
+  margin-top: 20px;
+}
